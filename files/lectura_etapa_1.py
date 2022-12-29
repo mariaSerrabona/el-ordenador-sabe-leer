@@ -19,6 +19,7 @@
 #   Haga clic en el botón install situado en la parte inferior izquierda
 #-----------------------------------------------------------------------------------------
 
+
 import cv2
 
 
@@ -30,7 +31,7 @@ class etapa1():
         self.zonaEscrituraAnchoMin=zonaEscrituraAnchoMin
         self.zonaEscrituraAnchoMax=zonaEscrituraAnchoMax
 
-    
+
 
     def web_cam_creation(self):
         webCam = cv2.VideoCapture(0)
@@ -81,7 +82,7 @@ class etapa1():
         cv2.destroyAllWindows()
 
 def main():
-    
+
     #dimensiones de la pizarra
     zonaEscrituraLargoMin = 540
     zonaEscrituraLargoMax = 590
@@ -90,3 +91,6 @@ def main():
     print('Inicialización de la webcam')
     lectura_primera_etapa=etapa1(zonaEscrituraLargoMin,zonaEscrituraLargoMax, zonaEscrituraAnchoMin, zonaEscrituraAnchoMax )
     lectura_primera_etapa.web_cam_creation()
+
+if __name__ == '__main__':
+    main()
